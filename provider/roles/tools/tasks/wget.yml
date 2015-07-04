@@ -1,0 +1,3 @@
+---
+- name: Install Wget
+  apt: name=wget state=present
