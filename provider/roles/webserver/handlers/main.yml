@@ -1,3 +1,6 @@
 ---
 - name: reload apache
   service: name=apache2 state=reloaded
+
+- name: reload mysql
+  service: name=mysql state=reloaded
