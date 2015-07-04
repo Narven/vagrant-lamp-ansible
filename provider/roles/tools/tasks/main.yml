@@ -1,0 +1,4 @@
+---
+- include: composer.yml
+- include: wget.yml
+- include: curl.yml
