@@ -1,0 +1,4 @@
+---
+# console UI for git
+- name: Install TIG
+  apt: name=tig state=present

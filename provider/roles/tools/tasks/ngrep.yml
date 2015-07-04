@@ -1,0 +1,4 @@
+---
+# Network grep
+- name: Install NGREP
+  apt: name=ngrep state=present
