@@ -3,6 +3,13 @@
   get_url:
     url=https://getcomposer.org/installer
     dest=/usr/bin/composer
+- name: Set Composer Hidden folder
+  file:
+    path={{ vagrant_home }}/.composer
+    state=directory
+    mode=0755
+    owner={{ vagrant_owner }}
+    group={{ vagrant_group }}
 - name: Set Composer Permissions
   file:
     path=/usr/bin/composer
