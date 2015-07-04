@@ -1,0 +1,28 @@
+---
+- name: Install Composer Global
+  get_url:
+    url=https://getcomposer.org/installer
+    dest=/usr/bin/composer
+- name: Set Composer Permissions
+  file:
+    path=/usr/bin/composer
+    owner={{ vagrant_owner }}
+    group={{ vagrant_group }}
+    mode=0755
+- name: Set Default Configurations
+  template:
+    src=composer_config.j2
+    dest={{ vagrant_home }}/.composer/config.json
+- name: Set Composer Config Permissions
+  file:
+    path={{ vagrant_home }}/.composer/config.json
+    owner={{ vagrant_owner }}
+    group={{ vagrant_group }}
+    mode=0644
+- name: Set Composer vendor folder and set permissions
+  file:
+    path={{ composer_vendor_dir }}
+    state=directory
+    mode=0755
+    owner={{ vagrant_owner }}
+    group={{ vagrant_group }}

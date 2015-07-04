@@ -2,10 +2,24 @@
 - hosts: all
   sudo: true
   vars:
+    # VAGRANT
+    vagrant_home: /home/vagrant
+    vagrant_owner: vagrant
+    vagrant_group: vagrant
+    # COMPOSER CONFIGURATIONS
+    composer_vendor_dir: /home/vagrant/vendor
+    composer_process_timeout: 2000
+    composer_optimize_autoloader: 'true'
+    composer_discard_changes: 'true'
+    composer_github_protocols: ['https', 'ssh']
+    # WEBSERVER CONFIGURATIONS
     document_root: /var/www/html
+    # PROJECT CONFIGURATIONS
+    project_path: /var/www/html/project
   pre_tasks:
-    - name: update apt cache
+    - name: Update APT Cache
       apt: update_cache=yes
   roles:
     - webserver
     - database
+    - tools
