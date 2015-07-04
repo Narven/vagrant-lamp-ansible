@@ -1,0 +1,5 @@
+---
+# pipe output of a command to your clipboard
+# some command|xsel --clipboard
+- name: Install XSEL
+  apt: name=xsel state=present

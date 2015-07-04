@@ -7,3 +7,4 @@
 - include: htop.yml
 - include: ngrep.yml
 - include: tig.yml
+- include: xsel.yml
