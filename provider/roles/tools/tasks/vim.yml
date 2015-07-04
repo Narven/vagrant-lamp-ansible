@@ -1,0 +1,13 @@
+---
+- name: Install VIM
+  apt: name=vim state=present
+- name: Set VIM configurations
+  template:
+    src=vimrc.j2
+    dest={{ vagrant_home }}/.vimrc
+- name: Set VIMRC Permissions
+  file:
+    path={{ vagrant_home }}/.vimrc
+    owner={{ vagrant_owner }}
+    group={{ vagrant_group }}
+    mode=0644

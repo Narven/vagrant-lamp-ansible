@@ -2,3 +2,4 @@
 - include: composer.yml
 - include: wget.yml
 - include: curl.yml
+- include: vim.yml

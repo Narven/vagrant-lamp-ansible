@@ -1,0 +1,118 @@
+set nocompatible " remove compatibility to vi
+
+set number
+syntax enable
+set background=dark
+let g:solarized_termcolors = 256
+
+"################### KEYMAPPING
+" set a map leader for more key combos
+let mapleader = ','
+
+"################## TAB CONTROL
+set noexpandtab " tabs ftw
+set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=2 " the visible width of tabs
+set softtabstop=2 " edit as if the tabs are 4 characters wide
+set shiftwidth=2 " number of spaces to use for indent and unindent
+set shiftround " round indent to a multiple of 'shiftwidth'
+
+set clipboard=unnamed
+
+"################## OTHER STUFF
+
+" faster redrawing
+set ttyfast
+
+" code folding settings
+set foldmethod=syntax " fold based on indent
+set foldnestmax=10 " deepest fold is 10 levels
+set nofoldenable " don't fold by default
+set foldlevel=1
+
+"################### UI
+
+" Searching
+set ignorecase " case insensitive searching
+set smartcase " case-sensitive if expresson contains a capital letter
+set hlsearch
+set incsearch " set incremental search, like modern browsers
+set nolazyredraw " don't redraw while executing macros
+
+set magic " Set magic on, for regex
+
+set showmatch " show matching braces
+
+set mat=2 " how many tenths of a second to blink
+
+" switch syntax highlighting on
+syntax on
+
+set encoding=utf8
+let base16colorspace=256  " Access colors present in 256 colorspace"
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+set background=dark
+"colorscheme delek
+
+set number
+
+set autoindent " automatically set indent of new line
+set smartindent
+
+set laststatus=2 " show the satus line all the time
+
+set nowrap
+
+set autoread        " detect when a file is changed
+
+set backspace=indent,eol,start  " make backspace behave in a sane manner
+
+set tabstop=2      " Number of spaces that a <Tab> in the file counts for.
+
+set shiftwidth=2    " Number of spaces to use for each step of (auto)indent.
+
+set expandtab       " Use the appropriate number of spaces to insert a <Tab>.
+                    " Spaces are used in indents with the '>' and '<' commands
+                    " and when 'autoindent' is on. To insert a real tab when
+                    " 'expandtab' is on, use CTRL-V <Tab>.
+
+set smarttab        " When on, a <Tab> in front of a line inserts blanks
+                    " according to 'shiftwidth'. 'tabstop' is used in other
+                    " places. A <BS> will delete a 'shiftwidth' worth of space
+                    " at the start of the line.
+
+set showcmd         " Show (partial) command in status line.
+
+set nu              " for line numbers in the left margin.
+set cul             " highlights the line containing the cursor.
+
+set showmatch       " When a bracket is inserted, briefly jump to the matching
+                    " one. The jump is only done if the match can be seen on the
+                    " screen. The time to show the match can be set with
+                    " 'matchtime'.
+
+set hlsearch        " When there is a previous search pattern, highlight all
+                    " its matches.
+
+set incsearch       " While typing a search command, show immediately where the
+                    " so far typed pattern matches.
+
+set ignorecase      " Ignore case in search patterns.
+
+set smartcase       " Override the 'ignorecase' option if the search pattern
+                    " contains upper case characters.
+
+set backspace=2     " Influences the working of <BS>, <Del>, CTRL-W
+                    " and CTRL-U in Insert mode. This is a list of items,
+                    " separated by commas. Each item allows a way to backspace
+                    " over something.
+
+set textwidth=79    " Maximum width of text that is being inserted. A longer
+                    " line will be broken after white space to get this width.
+
+set ruler           " Show the line and column number of the cursor position,
+                    " separated by a comma.
+
+set mouse=a         " Enable the use of the mouse.
+
+set spelllang=en
