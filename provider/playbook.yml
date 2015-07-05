@@ -16,6 +16,11 @@
     document_root: /var/www/html
     # PROJECT CONFIGURATIONS
     project_path: /var/www/html/project
+    # PHP
+    php_short_open_tag: 'Off'
+    php_asp_tags: 'Off'
+    php_output_buffering: 4096
+    php_zlib_output_compression: 'Off'
   pre_tasks:
     - name: Update APT Cache
       apt: update_cache=yes
