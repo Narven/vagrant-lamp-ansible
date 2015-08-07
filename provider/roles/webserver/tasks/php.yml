@@ -5,3 +5,6 @@
   template:
     src=php_ini.j2
     dest=/etc/php5/apache2/php.ini
+- name: Install PHP MySQL
+  apt: name=php5-mysql state=present
+- service: name=apache2 state=restarted
